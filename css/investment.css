@@ -1,0 +1,312 @@
+/* INVERSIÓN PAGE — CSS Nesting */
+.how-it-works {
+	padding: 80px 48px 120px;
+	.how-inner {
+		max-width: 900px;
+		margin: 0 auto;
+		text-align: center;
+		> h2 {
+			font-family: var(--font-display);
+			font-weight: 700;
+			font-size: clamp(1.8rem, 3vw, 2.4rem);
+			margin-bottom: 64px;
+		}
+	}
+	.timeline {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 16px;
+			left: 10%;
+			right: 10%;
+			height: 2px;
+			background: var(--border);
+		}
+	}
+	.timeline-step {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		position: relative;
+		opacity: 0;
+		transform: translateY(25px);
+		.timeline-dot {
+			width: 34px;
+			height: 34px;
+			border-radius: 50%;
+			background: var(--bg);
+			border: 2px solid var(--accent);
+			margin-bottom: 24px;
+			position: relative;
+			z-index: 2;
+			&::after {
+				content: '';
+				position: absolute;
+				inset: 6px;
+				border-radius: 50%;
+				background: var(--accent);
+			}
+		}
+		.timeline-content {
+			.step-num {
+				font-family: var(--font-display);
+				font-size: 2rem;
+				font-weight: 300;
+				color: var(--accent);
+				opacity: 0.3;
+				display: block;
+				margin-bottom: 8px;
+			}
+			h3 {
+				font-family: var(--font-display);
+				font-weight: 600;
+				font-size: 1.1rem;
+				margin-bottom: 8px;
+			}
+			p {
+				font-size: 0.82rem;
+				color: var(--text-muted);
+				line-height: 1.6;
+				max-width: 200px;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+.calculator {
+	padding: 120px 48px;
+	background: var(--bg-elevated);
+	border-top: 1px solid var(--border);
+	.calc-inner {
+		max-width: 1100px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1.2fr 1fr;
+		gap: 64px;
+		align-items: start;
+	}
+	.calc-form h2 {
+		font-family: var(--font-display);
+		font-weight: 700;
+		font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+		margin-bottom: 40px;
+	}
+	.calc-field {
+		margin-bottom: 32px;
+		label {
+			display: block;
+			font-size: 0.8rem;
+			font-weight: 500;
+			color: var(--text-muted);
+			margin-bottom: 12px;
+			text-transform: uppercase;
+			letter-spacing: 0.08em;
+		}
+		.calc-input-wrap {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			background: var(--bg-card);
+			border: 1px solid var(--border);
+			border-radius: var(--radius);
+			padding: 14px 18px;
+			transition: border-color 0.3s;
+			&:focus-within {
+				border-color: var(--accent);
+			}
+			span {
+				font-size: 0.85rem;
+				color: var(--text-dim);
+			}
+			input {
+				flex: 1;
+				background: none;
+				border: none;
+				outline: none;
+				color: var(--text);
+				font-family: var(--font-display);
+				font-size: 1.6rem;
+				font-weight: 600;
+			}
+		}
+		input[type='range'] {
+			width: 100%;
+			margin-top: 16px;
+			-webkit-appearance: none;
+			appearance: none;
+			height: 3px;
+			background: var(--border);
+			border-radius: 4px;
+			outline: none;
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background: var(--accent);
+				cursor: pointer;
+				border: 3px solid var(--bg);
+				box-shadow: 0 0 12px rgba(140, 182, 60, 0.3);
+			}
+		}
+		.range-labels {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 8px;
+			font-size: 0.7rem;
+			color: var(--text-dim);
+		}
+	}
+	.calc-options {
+		display: flex;
+		gap: 10px;
+		.calc-opt {
+			flex: 1;
+			padding: 14px;
+			font-size: 0.82rem;
+			font-weight: 500;
+			font-family: var(--font-body);
+			border: 1px solid var(--border);
+			border-radius: var(--radius);
+			color: var(--text-muted);
+			background: var(--bg-card);
+			cursor: pointer;
+			transition: all 0.3s;
+			&:hover {
+				border-color: var(--accent);
+				color: var(--accent);
+			}
+			&.active {
+				background: var(--accent);
+				color: var(--bg);
+				border-color: var(--accent);
+			}
+		}
+	}
+	.calc-result .result-card {
+		background: var(--bg-card);
+		border: 1px solid var(--border);
+		border-radius: var(--radius-lg);
+		padding: 36px;
+	}
+	.result-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 14px 0;
+		span {
+			font-size: 0.85rem;
+			color: var(--text-muted);
+		}
+		strong {
+			font-family: var(--font-display);
+			font-size: 1.1rem;
+			font-weight: 600;
+		}
+		&--big strong {
+			font-size: 1.8rem;
+			color: var(--accent);
+		}
+		&--gain strong {
+			color: var(--accent-light);
+		}
+	}
+	.result-divider {
+		height: 1px;
+		background: var(--border);
+		margin: 8px 0;
+	}
+	.result-disclaimer {
+		font-size: 0.7rem;
+		color: var(--text-dim);
+		text-align: center;
+		margin-top: 16px;
+	}
+}
+.faq {
+	padding: 120px 48px;
+	.faq-inner {
+		max-width: 800px;
+		margin: 0 auto;
+		> h2 {
+			font-family: var(--font-display);
+			font-weight: 700;
+			font-size: clamp(1.6rem, 3vw, 2.2rem);
+			margin-bottom: 48px;
+		}
+	}
+	.faq-item {
+		border-bottom: 1px solid var(--border);
+		opacity: 0;
+		transform: translateY(15px);
+		summary {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 24px 0;
+			font-size: 1rem;
+			font-weight: 500;
+			cursor: pointer;
+			list-style: none;
+			transition: color 0.3s;
+			&:hover {
+				color: var(--accent);
+			}
+			&::-webkit-details-marker {
+				display: none;
+			}
+			&::after {
+				content: '+';
+				font-size: 1.4rem;
+				font-weight: 300;
+				color: var(--accent);
+				transition: transform 0.3s;
+			}
+		}
+		&[open] summary::after {
+			transform: rotate(45deg);
+		}
+		p {
+			padding: 0 0 24px;
+			font-size: 0.9rem;
+			color: var(--text-muted);
+			line-height: 1.7;
+		}
+	}
+}
+@media (max-width: 1100px) {
+	.calculator .calc-inner {
+		grid-template-columns: 1fr;
+	}
+}
+@media (max-width: 768px) {
+	.how-it-works {
+		padding: 60px 24px 80px;
+		.timeline {
+			grid-template-columns: 1fr;
+			gap: 40px;
+			&::before {
+				display: none;
+			}
+		}
+		.timeline-step {
+			flex-direction: row;
+			text-align: left;
+			gap: 20px;
+			.timeline-content p {
+				max-width: 100%;
+				margin: 0;
+			}
+		}
+	}
+	.calculator {
+		padding: 80px 24px;
+	}
+	.faq {
+		padding: 80px 24px;
+	}
+}
