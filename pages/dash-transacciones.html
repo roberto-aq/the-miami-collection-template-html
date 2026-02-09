@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Transacciones — Dashboard</title>
+		<!-- FONTS -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- CSS -->
+		<link rel="stylesheet" href="/css/global.css" />
+		<link rel="stylesheet" href="/css/dashboard.css" />
+		<link rel="stylesheet" href="/css/dash-pages.css" />
+	</head>
+	<body>
+		<nav class="dash-nav">
+			<div class="nav-brand">
+				<a href="index.html"
+					><svg width="36" height="24" viewBox="0 0 48 32">
+						<path
+							d="M24 2 L44 28 L4 28 Z"
+							fill="none"
+							stroke="#8CB63C"
+							stroke-width="2"
+						/>
+						<path
+							d="M16 12 L28 28 L4 28 Z"
+							fill="none"
+							stroke="#8CB63C"
+							stroke-width="1.2"
+							opacity="0.5"
+						/></svg></a
+				><span>The Miami Collection</span>
+			</div>
+			<div class="dash-nav-right">
+				<div class="dash-notif">
+					<svg
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+					>
+						<path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9" />
+						<path d="M13.73 21a2 2 0 01-3.46 0" /></svg
+					><span class="notif-dot"></span>
+				</div>
+				<div class="dash-user">
+					<div class="user-avatar">CM</div>
+					<div class="user-info">
+						<strong>Carlos M.</strong><span>Inversionista</span>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="dash-layout">
+			<aside class="dash-sidebar">
+				<a href="dashboard.html" class="side-link"
+					><svg
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+					>
+						<rect x="3" y="3" width="7" height="7" />
+						<rect x="14" y="3" width="7" height="7" />
+						<rect x="3" y="14" width="7" height="7" />
+						<rect x="14" y="14" width="7" height="7" /></svg
+					>Dashboard</a
+				>
+				<a href="dash-inversiones.html" class="side-link"
+					><svg
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+					>
+						<path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg
+					>Mis inversiones</a
+				>
+				<a href="dash-transacciones.html" class="side-link active"
+					><svg
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+					>
+						<rect x="1" y="4" width="22" height="16" rx="2" />
+						<path d="M1 10h22" /></svg
+					>Transacciones</a
+				>
+				<a href="dash-documentos.html" class="side-link"
+					><svg
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+					>
+						<path
+							d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"
+						/>
+						<polyline points="14 2 14 8 20 8" /></svg
+					>Documentos</a
+				>
+				<a href="dash-config.html" class="side-link"
+					><svg
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+					>
+						<circle cx="12" cy="12" r="3" />
+						<path
+							d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"
+						/></svg
+					>Configuración</a
+				>
+				<div class="side-divider"></div>
+				<a href="index.html" class="side-link side-link--back"
+					><svg
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+					>
+						<path d="M19 12H5M12 19l-7-7 7-7" /></svg
+					>Volver al sitio</a
+				>
+			</aside>
+			<main class="dash-main">
+				<div class="dash-page-header">
+					<div>
+						<h1>Transacciones</h1>
+						<p>Historial completo de movimientos de tu cuenta.</p>
+					</div>
+					<div class="header-actions">
+						<button class="btn btn--ghost btn--sm">
+							<svg
+								width="14"
+								height="14"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"
+								/></svg
+							>Exportar CSV
+						</button>
+						<select class="tx-filter" id="txFilter">
+							<option value="all">Todas</option>
+							<option value="deposit">Depósitos</option>
+							<option value="return">Rendimientos</option>
+							<option value="withdrawal">Retiros</option>
+						</select>
+					</div>
+				</div>
+
+				<!-- TRANSACTION SUMMARY -->
+				<div class="summary-strip">
+					<div class="summary-item">
+						<span>Total depositado</span
+						><strong data-counter="47500">$0</strong>
+					</div>
+					<div class="summary-item">
+						<span>Total rendimientos</span
+						><strong data-counter="5284" class="accent">$0</strong>
+					</div>
+					<div class="summary-item">
+						<span>Retiros</span><strong>$0</strong>
+					</div>
+					<div class="summary-item">
+						<span>Balance neto</span
+						><strong data-counter="52784" class="accent">$0</strong>
+					</div>
+				</div>
+
+				<!-- TRANSACTIONS TABLE -->
+				<div class="tx-card">
+					<div class="tx-table">
+						<div class="tx-header">
+							<span>Fecha</span><span>Descripción</span
+							><span>Proyecto</span><span>Tipo</span
+							><span class="tx-right">Monto</span><span>Estado</span>
+						</div>
+
+						<div class="tx-row" data-type="deposit">
+							<span class="tx-date">05 Feb 2026</span>
+							<span class="tx-desc"
+								><div class="tx-icon tx-icon--deposit">
+									<svg
+										width="14"
+										height="14"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+									>
+										<path d="M12 5v14M19 12l-7 7-7-7" />
+									</svg>
+								</div>
+								Inversión inicial</span
+							>
+							<span class="tx-project">Park Grove</span>
+							<span
+								><span class="tx-type-badge tx-type-badge--deposit"
+									>Depósito</span
+								></span
+							>
+							<span class="tx-right tx-amount negative"
+								>-$5,000.00</span
+							>
+							<span
+								><span class="tx-status tx-status--done"
+									>Completado</span
+								></span
+							>
+						</div>
+						<div class="tx-row" data-type="return">
+							<span class="tx-date">15 Ene 2026</span>
+							<span class="tx-desc"
+								><div class="tx-icon tx-icon--return">
+									<svg
+										width="14"
+										height="14"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+									>
+										<path d="M12 19V5M5 12l7-7 7 7" />
+									</svg>
+								</div>
+								Rendimiento Q3</span
+							>
+							<span class="tx-project">Brickell Heights</span>
+							<span
+								><span class="tx-type-badge tx-type-badge--return"
+									>Rendimiento</span
+								></span
+							>
+							<span class="tx-right tx-amount positive"
+								>+$628.00</span
+							>
+							<span
+								><span class="tx-status tx-status--done"
+									>Completado</span
+								></span
+							>
+						</div>
+						<div class="tx-row" data-type="return">
+							<span class="tx-date">15 Ene 2026</span>
+							<span class="tx-desc"
+								><div class="tx-icon tx-icon--return">
+									<svg
+										width="14"
+										height="14"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+									>
+										<path d="M12 19V5M5 12l7-7 7 7" />
+									</svg>
+								</div>
+								Rendimiento Q3</span
+							>
+							<span class="tx-project">Park Grove</span>
+							<span
+								><span class="tx-type-badge tx-type-badge--return"
+									>Rendimiento</span
+								></span
+							>
+							<span class="tx-right tx-amount positive"
+								>+$1,012.50</span
+							>
+							<span
+								><span class="tx-status tx-status--done"
+									>Completado</span
+								></span
+							>
+						</div>
+						<div class="tx-row" data-type="deposit">
+							<span class="tx-date">28 Dic 2025</span>
+							<span class="tx-desc"
+								><div class="tx-icon tx-icon--deposit">
+									<svg
+										width="14"
+										height="14"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+									>
+										<path d="M12 5v14M19 12l-7 7-7-7" />
+									</svg>
+								</div>
+								Inversión inicial</span
+							>
+							<span class="tx-project">Edgewater Towers</span>
+							<span
+								><span class="tx-type-badge tx-type-badge--deposit"
+									>Depósito</span
+								></span
+							>
+							<span class="tx-right tx-amount negative"
+								>-$7,600.00</span
+							>
+							<span
+								><span class="tx-status tx-status--done"
+									>Completado</span
+								></span
+							>
+						</div>
+						<div class="tx-row" data-type="return">
+							<span class="tx-date">15 Oct 2025</span>
+							<span class="tx-desc"
+								><div class="tx-icon tx-icon--return">
+									<svg
+										width="14"
+										height="14"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+									>
+										<path d="M12 19V5M5 12l7-7 7 7" />
+									</svg>
+								</div>
+								Rendimiento Q2</span
+							>
+							<span class="tx-project">Park Grove</span>
+							<span
+								><span class="tx-type-badge tx-type-badge--return"
+									>Rendimiento</span
+								></span
+							>
+							<span class="tx-right tx-amount positive"
+								>+$956.30</span
+							>
+							<span
+								><span class="tx-status tx-status--done"
+									>Completado</span
+								></span
+							>
+						</div>
+						<div class="tx-row" data-type="return">
+							<span class="tx-date">15 Oct 2025</span>
+							<span class="tx-desc"
+								><div class="tx-icon tx-icon--return">
+									<svg
+										width="14"
+										height="14"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+									>
+										<path d="M12 19V5M5 12l7-7 7 7" />
+									</svg>
+								</div>
+								Rendimiento Q2</span
+							>
+							<span class="tx-project">Brickell Heights</span>
+							<span
+								><span class="tx-type-badge tx-type-badge--return"
+									>Rendimiento</span
+								></span
+							>
+							<span class="tx-right tx-amount positive"
+								>+$479.40</span
+							>
+							<span
+								><span class="tx-status tx-status--done"
+									>Completado</span
+								></span
+							>
+						</div>
+						<div class="tx-row" data-type="deposit">
+							<span class="tx-date">12 Sep 2025</span>
+							<span class="tx-desc"
+								><div class="tx-icon tx-icon--deposit">
+									<svg
+										width="14"
+										height="14"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+									>
+										<path d="M12 5v14M19 12l-7 7-7-7" />
+									</svg>
+								</div>
+								Inversión adicional</span
+							>
+							<span class="tx-project">Park Grove</span>
+							<span
+								><span class="tx-type-badge tx-type-badge--deposit"
+									>Depósito</span
+								></span
+							>
+							<span class="tx-right tx-amount negative"
+								>-$10,000.00</span
+							>
+							<span
+								><span class="tx-status tx-status--done"
+									>Completado</span
+								></span
+							>
+						</div>
+						<div class="tx-row" data-type="deposit">
+							<span class="tx-date">03 Jul 2025</span>
+							<span class="tx-desc"
+								><div class="tx-icon tx-icon--deposit">
+									<svg
+										width="14"
+										height="14"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+									>
+										<path d="M12 5v14M19 12l-7 7-7-7" />
+									</svg>
+								</div>
+								Inversión inicial</span
+							>
+							<span class="tx-project">Brickell Heights</span>
+							<span
+								><span class="tx-type-badge tx-type-badge--deposit"
+									>Depósito</span
+								></span
+							>
+							<span class="tx-right tx-amount negative"
+								>-$11,400.00</span
+							>
+							<span
+								><span class="tx-status tx-status--done"
+									>Completado</span
+								></span
+							>
+						</div>
+						<div class="tx-row" data-type="deposit">
+							<span class="tx-date">15 Mar 2025</span>
+							<span class="tx-desc"
+								><div class="tx-icon tx-icon--deposit">
+									<svg
+										width="14"
+										height="14"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+									>
+										<path d="M12 5v14M19 12l-7 7-7-7" />
+									</svg>
+								</div>
+								Inversión inicial</span
+							>
+							<span class="tx-project">Park Grove</span>
+							<span
+								><span class="tx-type-badge tx-type-badge--deposit"
+									>Depósito</span
+								></span
+							>
+							<span class="tx-right tx-amount negative"
+								>-$13,500.00</span
+							>
+							<span
+								><span class="tx-status tx-status--done"
+									>Completado</span
+								></span
+							>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/gsap.min.js"></script>
+
+		<script src="/js/dash-pages.js"></script>
+		<script src="/js/dash-mobile.js"></script>
+	</body>
+</html>

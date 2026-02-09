@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Configuración — Dashboard</title>
+		<!-- FONTS -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- CSS -->
+		<link rel="stylesheet" href="/css/global.css" />
+		<link rel="stylesheet" href="/css/dashboard.css" />
+		<link rel="stylesheet" href="/css/dash-pages.css" />
+	</head>
+	<body>
+		<nav class="dash-nav">
+			<div class="nav-brand">
+				<a href="index.html"
+					><svg width="36" height="24" viewBox="0 0 48 32">
+						<path
+							d="M24 2 L44 28 L4 28 Z"
+							fill="none"
+							stroke="#8CB63C"
+							stroke-width="2"
+						/>
+						<path
+							d="M16 12 L28 28 L4 28 Z"
+							fill="none"
+							stroke="#8CB63C"
+							stroke-width="1.2"
+							opacity="0.5"
+						/></svg></a
+				><span>The Miami Collection</span>
+			</div>
+			<div class="dash-nav-right">
+				<div class="dash-notif">
+					<svg
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+					>
+						<path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9" />
+						<path d="M13.73 21a2 2 0 01-3.46 0" /></svg
+					><span class="notif-dot"></span>
+				</div>
+				<div class="dash-user">
+					<div class="user-avatar">CM</div>
+					<div class="user-info">
+						<strong>Carlos M.</strong><span>Inversionista</span>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="dash-layout">
+			<aside class="dash-sidebar">
+				<a href="dashboard.html" class="side-link"
+					><svg
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+					>
+						<rect x="3" y="3" width="7" height="7" />
+						<rect x="14" y="3" width="7" height="7" />
+						<rect x="3" y="14" width="7" height="7" />
+						<rect x="14" y="14" width="7" height="7" /></svg
+					>Dashboard</a
+				>
+				<a href="dash-inversiones.html" class="side-link"
+					><svg
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+					>
+						<path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg
+					>Mis inversiones</a
+				>
+				<a href="dash-transacciones.html" class="side-link"
+					><svg
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+					>
+						<rect x="1" y="4" width="22" height="16" rx="2" />
+						<path d="M1 10h22" /></svg
+					>Transacciones</a
+				>
+				<a href="dash-documentos.html" class="side-link"
+					><svg
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+					>
+						<path
+							d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"
+						/>
+						<polyline points="14 2 14 8 20 8" /></svg
+					>Documentos</a
+				>
+				<a href="dash-config.html" class="side-link active"
+					><svg
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+					>
+						<circle cx="12" cy="12" r="3" />
+						<path
+							d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"
+						/></svg
+					>Configuración</a
+				>
+				<div class="side-divider"></div>
+				<a href="index.html" class="side-link side-link--back"
+					><svg
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+					>
+						<path d="M19 12H5M12 19l-7-7 7-7" /></svg
+					>Volver al sitio</a
+				>
+			</aside>
+			<main class="dash-main">
+				<div class="dash-page-header">
+					<div>
+						<h1>Configuración</h1>
+						<p>
+							Administra tu perfil, seguridad y preferencias de
+							notificación.
+						</p>
+					</div>
+				</div>
+
+				<!-- CONFIG SECTIONS -->
+				<div class="config-sections">
+					<!-- PROFILE -->
+					<div class="config-card">
+						<div class="config-card-header">
+							<h3>Información personal</h3>
+							<span class="config-badge">Verificado</span>
+						</div>
+						<div class="config-form">
+							<div class="config-row">
+								<div class="config-field">
+									<label>Nombre</label
+									><input type="text" value="Carlos" />
+								</div>
+								<div class="config-field">
+									<label>Apellido</label
+									><input type="text" value="Mendoza" />
+								</div>
+							</div>
+							<div class="config-row">
+								<div class="config-field">
+									<label>Email</label
+									><input
+										type="email"
+										value="carlos.mendoza@email.com"
+									/>
+								</div>
+								<div class="config-field">
+									<label>Teléfono</label
+									><input type="tel" value="+1 (305) 555-0147" />
+								</div>
+							</div>
+							<div class="config-row">
+								<div class="config-field">
+									<label>País de residencia</label>
+									<select>
+										<option selected>Estados Unidos</option>
+										<option>Colombia</option>
+										<option>México</option>
+										<option>Ecuador</option>
+										<option>Otro</option>
+									</select>
+								</div>
+								<div class="config-field">
+									<label>Fecha de nacimiento</label
+									><input type="date" value="1988-06-15" />
+								</div>
+							</div>
+							<button class="btn btn--primary btn--sm config-save">
+								Guardar cambios
+							</button>
+						</div>
+					</div>
+
+					<!-- SECURITY -->
+					<div class="config-card">
+						<div class="config-card-header"><h3>Seguridad</h3></div>
+						<div class="config-option">
+							<div class="config-option-info">
+								<h4>Contraseña</h4>
+								<p>Última actualización hace 3 meses</p>
+							</div>
+							<button class="btn btn--outline btn--sm">
+								Cambiar contraseña
+							</button>
+						</div>
+						<div class="config-option">
+							<div class="config-option-info">
+								<h4>Autenticación de dos factores (2FA)</h4>
+								<p>
+									Protege tu cuenta con un segundo paso de
+									verificación
+								</p>
+							</div>
+							<label class="toggle"
+								><input type="checkbox" checked /><span
+									class="toggle-slider"
+								></span
+							></label>
+						</div>
+						<div class="config-option">
+							<div class="config-option-info">
+								<h4>Sesiones activas</h4>
+								<p>Chrome en macOS — Miami, FL (actual)</p>
+							</div>
+							<button class="btn btn--ghost btn--sm">
+								Ver todas
+							</button>
+						</div>
+					</div>
+
+					<!-- NOTIFICATIONS -->
+					<div class="config-card">
+						<div class="config-card-header">
+							<h3>Notificaciones</h3>
+						</div>
+						<div class="config-option">
+							<div class="config-option-info">
+								<h4>Rendimientos trimestrales</h4>
+								<p>
+									Recibe un email cuando se distribuyan rendimientos
+								</p>
+							</div>
+							<label class="toggle"
+								><input type="checkbox" checked /><span
+									class="toggle-slider"
+								></span
+							></label>
+						</div>
+						<div class="config-option">
+							<div class="config-option-info">
+								<h4>Actualizaciones de proyectos</h4>
+								<p>Notificaciones sobre avances de construcción</p>
+							</div>
+							<label class="toggle"
+								><input type="checkbox" checked /><span
+									class="toggle-slider"
+								></span
+							></label>
+						</div>
+						<div class="config-option">
+							<div class="config-option-info">
+								<h4>Nuevas oportunidades</h4>
+								<p>Aviso cuando se publiquen nuevos proyectos</p>
+							</div>
+							<label class="toggle"
+								><input type="checkbox" /><span
+									class="toggle-slider"
+								></span
+							></label>
+						</div>
+						<div class="config-option">
+							<div class="config-option-info">
+								<h4>Newsletter mensual</h4>
+								<p>Resumen del mercado inmobiliario de Miami</p>
+							</div>
+							<label class="toggle"
+								><input type="checkbox" checked /><span
+									class="toggle-slider"
+								></span
+							></label>
+						</div>
+					</div>
+
+					<!-- PAYMENT METHODS -->
+					<div class="config-card">
+						<div class="config-card-header">
+							<h3>Métodos de pago</h3>
+							<button class="btn btn--outline btn--sm">
+								+ Agregar método
+							</button>
+						</div>
+						<div class="config-payment">
+							<div class="payment-item">
+								<div class="payment-icon">
+									<svg
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="#8CB63C"
+										stroke-width="1.5"
+									>
+										<rect x="1" y="4" width="22" height="16" rx="2" />
+										<path d="M1 10h22" />
+									</svg>
+								</div>
+								<div class="payment-info">
+									<strong>Visa •••• 4829</strong
+									><span>Expira 08/27</span>
+								</div>
+								<span class="payment-default">Principal</span>
+							</div>
+							<div class="payment-item">
+								<div class="payment-icon">
+									<svg
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="1.5"
+									>
+										<rect x="1" y="4" width="22" height="16" rx="2" />
+										<path d="M1 10h22" />
+									</svg>
+								</div>
+								<div class="payment-info">
+									<strong>Bank of America •••• 1156</strong
+									><span>Cuenta de cheques</span>
+								</div>
+								<button class="btn btn--ghost btn--sm">
+									Hacer principal
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- DANGER ZONE -->
+					<div class="config-card config-card--danger">
+						<div class="config-card-header">
+							<h3>Zona de peligro</h3>
+						</div>
+						<div class="config-option">
+							<div class="config-option-info">
+								<h4>Desactivar cuenta</h4>
+								<p>
+									Tu cuenta será suspendida temporalmente. Podrás
+									reactivarla en cualquier momento.
+								</p>
+							</div>
+							<button class="btn btn--ghost btn--sm btn--danger">
+								Desactivar
+							</button>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/gsap.min.js"></script>
+
+		<script src="/js/dash-pages.js"></script>
+		<script src="/js/dash-mobile.js"></script>
+	</body>
+</html>

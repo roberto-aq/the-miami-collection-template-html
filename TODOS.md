@@ -1,0 +1,4 @@
+- Explorar la opcion de colocar un .container en global y usarlo en todas las paginas 
+- Generar imagenes y cambiar por ejemplo en paginas como properties.html
+- Arreglar el menu lateral en mobile en la parte del dashboard, no se ve nada al aplastar el boton
+- Y arreglar el responsive del dashboard en general, se ve mal en mobile y tablet

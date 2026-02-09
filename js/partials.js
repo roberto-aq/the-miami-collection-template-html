@@ -2,8 +2,10 @@
 /*               FOOTER               */
 /* ********************************** */
 const currentYearElement = document.getElementById('current-year');
-const currentYear = new Date().getFullYear();
-currentYearElement.textContent = currentYear;
+if (currentYearElement) {
+	const currentYear = new Date().getFullYear();
+	currentYearElement.textContent = currentYear;
+}
 
 /* ********************************** */
 /*                MENU                */
